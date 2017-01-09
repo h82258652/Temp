@@ -1,0 +1,89 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="using:AiXiFan.Uwp.Controls"
+                    xmlns:converters="using:AiXiFan.Uwp.Converters"
+                    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+                    xmlns:fontAwesome="using:SoftwareKobo.Icons.FontAwesome"
+                    xmlns:interactivity="using:Microsoft.Xaml.Interactivity">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/AiXiFanBrushStyle.xaml" />
+        <ResourceDictionary Source="/Styles/AiXiFanFontSizeStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style TargetType="controls:ArticleItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:ArticleItem">
+                    <Grid>
+                        <Grid.Resources>
+                            <converters:IsNullToVisibilityConverter x:Key="IsNullToVisibilityConverter" />
+                        </Grid.Resources>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Name="ChannelNameTextBlock"
+                                   Grid.Row="0"
+                                   FontSize="{StaticResource AiXiFanTertiaryTextFontSize}"
+                                   Foreground="{StaticResource AiXiFanTertiaryTextDarkBrush}"
+                                   Visibility="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},
+                                                        Path=ChannelName,
+                                                        Converter={StaticResource IsNullToVisibilityConverter}}">
+                            <Run Text="/来自 " /><Run Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=ChannelName}" /></TextBlock>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="48" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0"
+                                        Orientation="Vertical">
+                                <TextBlock FontSize="{StaticResource AiXiFanSecondaryTextFontSize}"
+                                           FontWeight="Bold"
+                                           Foreground="{StaticResource AiXiFanAccentBrush}"
+                                           Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},
+                                                          Path=CommentCount}"
+                                           TextAlignment="Center" />
+                                <TextBlock FontSize="{StaticResource AiXiFanTertiaryTextFontSize}"
+                                           Foreground="{StaticResource AiXiFanTertiaryTextDarkBrush}"
+                                           Text="评论"
+                                           TextAlignment="Center" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="1"
+                                        Orientation="Vertical">
+                                <TextBlock FontSize="{StaticResource AiXiFanPrimaryTextFontSize}"
+                                           FontWeight="Bold"
+                                           Foreground="{StaticResource AiXiFanPrimaryTextDarkBrush}"
+                                           Text="{TemplateBinding Title}"
+                                           TextWrapping="Wrap" />
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               FontSize="{StaticResource AiXiFanSecondaryTextFontSize}"
+                                               Foreground="{StaticResource AiXiFanSecondaryTextDarkBrush}">
+                                        <Run Text="UP主：" /><Run Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Owner}" /></TextBlock>
+                                    <StackPanel Grid.Column="1"
+                                                Orientation="Horizontal">
+                                        <fontAwesome:FontAwesomeIcon VerticalAlignment="Center"
+                                                                     FontSize="{StaticResource AiXiFanTertiaryTextFontSize}"
+                                                                     Foreground="{StaticResource AiXiFanTertiaryTextDarkBrush}"
+                                                                     Symbol="Eye" />
+                                        <TextBlock Margin="4,0,0,0"
+                                                   VerticalAlignment="Center"
+                                                   FontSize="{StaticResource AiXiFanTertiaryTextFontSize}"
+                                                   Foreground="{StaticResource AiXiFanTertiaryTextDarkBrush}"
+                                                   LineHeight="{StaticResource AiXiFanTertiaryTextFontSize}"
+                                                   LineStackingStrategy="BlockLineHeight"
+                                                   Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},
+                                                                  Path=ViewCount}" />
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

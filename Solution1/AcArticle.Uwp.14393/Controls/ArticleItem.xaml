@@ -1,0 +1,54 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="using:SoftwareKobo.Controls"
+                    xmlns:fontAwesome="using:SoftwareKobo.Icons.FontAwesome"
+                    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+                    xmlns:local="using:AcArticle.Uwp.Controls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/AcArticleBrushStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style TargetType="local:ArticleItem">
+        <Setter Property="Background"
+                Value="White" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ArticleItem">
+                    <local:Card Background="{TemplateBinding Background}">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Foreground="{ThemeResource AcArticlePrimaryTextDarkBrush}"
+                                       Text="{TemplateBinding Title}" />
+                            <StackPanel Orientation="Horizontal">
+                                <fontAwesome:FontAwesomeIcon Foreground="{ThemeResource AcArticleAccentLightBrush}"
+                                                             Symbol="Eye" />
+                                <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=ViewCount}" />
+                                <fontAwesome:FontAwesomeIcon Foreground="{ThemeResource AcArticleAccentLightBrush}"
+                                                             Symbol="Comment" />
+                                <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=CommentCount}" />
+                            </StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Ellipse Width="24"
+                                             Height="24">
+                                        <Ellipse.Fill>
+                                            <ImageBrush Stretch="UniformToFill">
+                                                <interactivity:Interaction.Behaviors>
+                                                    <controls:ImageExBehavior x:Name="PART_AuthorAvatarImageExBehavior" />
+                                                </interactivity:Interaction.Behaviors>
+                                            </ImageBrush>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                </Grid>
+                                <TextBlock Grid.Column="1"
+                                           Text="{TemplateBinding AuthorName}" />
+                            </Grid>
+                        </StackPanel>
+                    </local:Card>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

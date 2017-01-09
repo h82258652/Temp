@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:behaviors="using:AiXiFan.Uwp.Behaviors"
+                    xmlns:controls="using:AiXiFan.Uwp.Controls"
+                    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+                    xmlns:interactivity="using:Microsoft.Xaml.Interactivity">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/AiXiFanButtonStyle.xaml" />
+        <ResourceDictionary Source="/Styles/AiXiFanTextBlockStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style TargetType="controls:TitleBar">
+        <Setter Property="Background"
+                Value="{StaticResource AiXiFanAccentBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:TitleBar">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="48" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0"
+                                Style="{StaticResource NavigationBackButtonStyle}">
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="Click">
+                                    <behaviors:GoBackAction />
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                        </Button>
+                        <Grid x:Name="PART_TitleZone"
+                              Grid.Column="1"
+                              Background="Transparent">
+                            <TextBlock Style="{StaticResource TitleBarTextBlockStyle}"
+                                       Text="{TemplateBinding Title}" />
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

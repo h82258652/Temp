@@ -1,0 +1,470 @@
+﻿{
+  "code": 200,
+  "data": [
+    {
+      "belong": 11,
+      "channelId": 63,
+      "contentCount": 2,
+      "contents": [
+        {
+          "actionId": 10,
+          "hide": 0,
+          "id": 113,
+          "image": "http://imgs.aixifan.com/cms/2016_09_26/1474865481582.png",
+          "regionId": 31,
+          "releasedAt": 1460939724000,
+          "shareTagShow": 0,
+          "subTitle": "",
+          "subUrl": "",
+          "title": "banner左",
+          "url": "3127740"
+        },
+        {
+          "actionId": 10,
+          "hide": 0,
+          "id": 111,
+          "image": "http://imgs.aixifan.com/cms/2016_09_26/1474865650452.jpg",
+          "regionId": 31,
+          "releasedAt": 1460876211000,
+          "shareTagShow": 0,
+          "subTitle": "",
+          "subUrl": "",
+          "title": "banner右",
+          "url": "3128840"
+        }
+      ],
+      "deviceType": -1,
+      "hide": 0,
+      "id": 31,
+      "image": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201509/151501543d1w9q6i.png",
+      "menuCount": 0,
+      "name": "文章横幅",
+      "platformId": 1,
+      "showLine": 0,
+      "showMore": 0,
+      "showName": 0,
+      "sort": 200,
+      "type": {
+        "id": 6,
+        "name": "横幅",
+        "value": "banners"
+      },
+      "url": ""
+    },
+    {
+      "belong": 11,
+      "channelId": 63,
+      "contentCount": 5,
+      "contents": [
+        {
+          "actionId": 6,
+          "hide": 0,
+          "id": 659,
+          "image": "http://imgs.aixifan.com/cms/2016_09_06/1473156919001.png",
+          "regionId": 129,
+          "releasedAt": 1441962125000,
+          "shareTagShow": 0,
+          "subTitle": "",
+          "subUrl": "",
+          "title": "工作·情感",
+          "url": "73"
+        },
+        {
+          "actionId": 6,
+          "hide": 0,
+          "id": 657,
+          "image": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201601/121047331kz1be1i.png",
+          "regionId": 129,
+          "releasedAt": 1441962044000,
+          "shareTagShow": 0,
+          "subTitle": "",
+          "subUrl": "",
+          "title": "动漫文化",
+          "url": "74"
+        },
+        {
+          "actionId": 6,
+          "hide": 0,
+          "id": 655,
+          "image": "http://imgs.aixifan.com/cms/2016_09_12/1473666062381.png",
+          "regionId": 129,
+          "releasedAt": 1441961973000,
+          "shareTagShow": 0,
+          "subTitle": "",
+          "subUrl": "",
+          "title": "漫画·小说",
+          "url": "75"
+        },
+        {
+          "actionId": 6,
+          "hide": 0,
+          "id": 653,
+          "image": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201601/12104751a9hn44z0.png",
+          "regionId": 129,
+          "releasedAt": 1441961858000,
+          "shareTagShow": 0,
+          "subTitle": "",
+          "subUrl": "",
+          "title": "综合",
+          "url": "110"
+        },
+        {
+          "actionId": 6,
+          "hide": 0,
+          "id": 5863,
+          "image": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201601/12104800y95pdgv4.png",
+          "regionId": 129,
+          "releasedAt": 1441960509000,
+          "shareTagShow": 0,
+          "subTitle": "",
+          "subUrl": "",
+          "title": "游戏",
+          "url": "164"
+        }
+      ],
+      "deviceType": -1,
+      "hide": 0,
+      "id": 129,
+      "image": "",
+      "menuCount": 0,
+      "name": "【勿动】子分区频道入口",
+      "platformId": 1,
+      "showLine": 0,
+      "showMore": 0,
+      "showName": 0,
+      "sort": 190,
+      "type": {
+        "id": 7,
+        "name": "频道",
+        "value": "channels"
+      },
+      "url": ""
+    },
+    {
+      "belong": 11,
+      "channelId": 63,
+      "contentCount": 10,
+      "contents": [
+        {
+          "actionId": 10,
+          "channelId": 110,
+          "hide": 0,
+          "id": 50710,
+          "image": "http://cdn.aixifan.com/dotnet/20120923/style/image/cover-day.png",
+          "intro": "就是蛋黄酥啊…………",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201603/31125948d3wag5k8.jpg",
+            "id": 3985894,
+            "name": "一只三丁包"
+          },
+          "regionId": 33,
+          "releaseDate": 1474873609000,
+          "releasedAt": 1474878473000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "title": "【一只三丁包】蛋黄酥…",
+          "url": "3134013",
+          "visit": {
+            "comments": 79,
+            "danmakuSize": 0,
+            "goldBanana": 106,
+            "score": 0,
+            "stows": 390,
+            "ups": 0,
+            "views": 9044
+          }
+        },
+        {
+          "actionId": 10,
+          "channelId": 110,
+          "hide": 0,
+          "id": 50615,
+          "image": "http://imgs.aixifan.com/content/2016_09_25/1474798776.jpg",
+          "intro": "一场为了吃吃吃的旅行",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/20120923/style/image/avatar.jpg",
+            "id": 70268,
+            "name": "TC-Rb"
+          },
+          "regionId": 33,
+          "releaseDate": 1474799518000,
+          "releasedAt": 1474867514000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "subUrl": "",
+          "title": "【多图流量慎入】}孤独的美食家巡礼—某ACer独自一人的东京之旅",
+          "url": "3132142",
+          "visit": {
+            "comments": 118,
+            "danmakuSize": 0,
+            "goldBanana": 47,
+            "score": 0,
+            "stows": 400,
+            "ups": 0,
+            "views": 15944
+          }
+        },
+        {
+          "actionId": 10,
+          "channelId": 110,
+          "hide": 0,
+          "id": 50698,
+          "image": "http://cdn.aixifan.com/dotnet/20120923/style/image/cover-day.png",
+          "intro": "爱笑岂有罪？冷笑话万岁！！！",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201505/03183450yat1.jpg",
+            "id": 1373916,
+            "name": "爱笑⑨课"
+          },
+          "regionId": 33,
+          "releaseDate": 1474864334000,
+          "releasedAt": 1474867323000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "title": "爱笑岂有罪？冷笑话万岁！1121",
+          "url": "3133640",
+          "visit": {
+            "comments": 24,
+            "danmakuSize": 0,
+            "goldBanana": 25,
+            "score": 0,
+            "stows": 73,
+            "ups": 0,
+            "views": 7446
+          }
+        },
+        {
+          "actionId": 10,
+          "channelId": 74,
+          "hide": 0,
+          "id": 50697,
+          "image": "http://imgs.aixifan.com/content/2016_09_26/1474858842.jpg",
+          "intro": "官方正式宣布#银魂#最终章《銀ノ魂》篇开启，同时最新TV动画系列制作决定！",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201609/22195943d89q4q38.jpg",
+            "id": 1304651,
+            "name": "鹭泽文香"
+          },
+          "regionId": 33,
+          "releaseDate": 1474858856000,
+          "releasedAt": 1474867313000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "title": "《银魂》最终章降临",
+          "url": "3133442",
+          "visit": {
+            "comments": 86,
+            "danmakuSize": 0,
+            "goldBanana": 12,
+            "score": 0,
+            "stows": 60,
+            "ups": 0,
+            "views": 10240
+          }
+        },
+        {
+          "actionId": 10,
+          "channelId": 74,
+          "hide": 0,
+          "id": 50616,
+          "image": "http://cdn.aixifan.com/dotnet/20120923/style/image/cover-night.png",
+          "intro": "《一拳超人》动画第二季制作决定！",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201512/141907402i6eisps.jpg",
+            "id": 613827,
+            "name": "九折坂二人"
+          },
+          "regionId": 33,
+          "releaseDate": 1474807913000,
+          "releasedAt": 1474859660000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "title": "《一拳超人》动画第二季制作决定！",
+          "url": "3132404",
+          "visit": {
+            "comments": 157,
+            "danmakuSize": 0,
+            "goldBanana": 31,
+            "score": 0,
+            "stows": 115,
+            "ups": 0,
+            "views": 23554
+          }
+        },
+        {
+          "actionId": 10,
+          "channelId": 75,
+          "hide": 0,
+          "id": 50699,
+          "image": "http://imgs.aixifan.com/content/2016_09_25/1474820733.jpg",
+          "intro": "穿着娇羞可人清纯羞涩的小白龙牌布鞋去西天取经的物理系等级999(无队友时攻击力×10)的猛男唐僧、\r<br/>虎皮裙抹胸飞机场孙猴子、大波hentai三到九十九岁通吃母猪八戒、死库水无口电波沙僧，\r<br/>无厘头掉节操搞笑故事——唐山葬",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201609/20210909j25k0j3f.jpg",
+            "id": 614361,
+            "name": "poorich"
+          },
+          "regionId": 33,
+          "releaseDate": 1474821418000,
+          "releasedAt": 1474857035000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "title": "【漫画】唐山葬 #22—#24",
+          "url": "3132802",
+          "visit": {
+            "comments": 16,
+            "danmakuSize": 0,
+            "goldBanana": 11,
+            "score": 0,
+            "stows": 37,
+            "ups": 0,
+            "views": 8686
+          }
+        },
+        {
+          "actionId": 10,
+          "channelId": 75,
+          "hide": 0,
+          "id": 50548,
+          "image": "http://imgs.aixifan.com/content/2016_09_25/1474790590.jpg",
+          "intro": "千呼万唤始出来，龟罗纪漫画首发第一期",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201609/251557524wayrf8n.jpg",
+            "id": 6546414,
+            "name": "Toby店长"
+          },
+          "regionId": 33,
+          "releaseDate": 1474790914000,
+          "releasedAt": 1474794532000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "title": "【阿汤龟与川河会】第一话",
+          "url": "3131891",
+          "visit": {
+            "comments": 14,
+            "danmakuSize": 0,
+            "goldBanana": 19,
+            "score": 0,
+            "stows": 43,
+            "ups": 0,
+            "views": 3344
+          }
+        },
+        {
+          "actionId": 10,
+          "channelId": 110,
+          "hide": 0,
+          "id": 50530,
+          "image": "http://cdn.aixifan.com/dotnet/20120923/style/image/cover.png",
+          "intro": "天涯犹在，不诉薄凉。",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201511/1222211354841ist.jpg",
+            "id": 902939,
+            "name": "火之乐成狗"
+          },
+          "regionId": 33,
+          "releaseDate": 1474740357000,
+          "releasedAt": 1474771680000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "title": "郭德纲正式回应曹云金：天涯犹在，不诉薄凉。",
+          "url": "3130875",
+          "visit": {
+            "comments": 1821,
+            "danmakuSize": 0,
+            "goldBanana": 46,
+            "score": 0,
+            "stows": 401,
+            "ups": 0,
+            "views": 67126
+          }
+        },
+        {
+          "actionId": 10,
+          "channelId": 110,
+          "hide": 0,
+          "id": 50527,
+          "image": "http://cdn.aixifan.com/dotnet/20120923/style/image/cover-night.png",
+          "intro": "基本都是第一天的，第二天去试玩游戏了，没怎么拍",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201511/15151129uch4prgs.jpg",
+            "id": 515466,
+            "name": "夕夏的小兵"
+          },
+          "regionId": 33,
+          "releaseDate": 1474732019000,
+          "releasedAt": 1474771603000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "title": "【摄影】个人拍的TGS上的那些COS（2016）",
+          "url": "3130723",
+          "visit": {
+            "comments": 63,
+            "danmakuSize": 0,
+            "goldBanana": 8,
+            "score": 0,
+            "stows": 218,
+            "ups": 0,
+            "views": 13026
+          }
+        },
+        {
+          "actionId": 10,
+          "channelId": 110,
+          "hide": 0,
+          "id": 50526,
+          "image": "http://imgs.aixifan.com/content/2016_09_24/1474710611.jpg",
+          "intro": "你们这是自寻死路！ BIUBIUBIU",
+          "owner": {
+            "avatar": "http://cdn.aixifan.com/dotnet/20120923/style/image/avatar.jpg",
+            "id": 901467,
+            "name": "式子"
+          },
+          "regionId": 33,
+          "releaseDate": 1474712041000,
+          "releasedAt": 1474771568000,
+          "shareTagShow": 0,
+          "status": 2,
+          "subTitle": "",
+          "title": "守望先锋-军团天使的入侵。",
+          "url": "3130088",
+          "visit": {
+            "comments": 80,
+            "danmakuSize": 0,
+            "goldBanana": 55,
+            "score": 0,
+            "stows": 243,
+            "ups": 0,
+            "views": 22666
+          }
+        }
+      ],
+      "deviceType": -1,
+      "hide": 0,
+      "id": 33,
+      "image": "http://imgs.aixifan.com/cms/2016_02_22/1456115736296.png",
+      "menuCount": 0,
+      "name": "文章推荐",
+      "platformId": 1,
+      "showLine": 1,
+      "showMore": 0,
+      "showName": 0,
+      "sort": 100,
+      "type": {
+        "id": 2,
+        "name": "文章",
+        "value": "articles"
+      },
+      "url": ""
+    }
+  ],
+  "message": "OK"
+}

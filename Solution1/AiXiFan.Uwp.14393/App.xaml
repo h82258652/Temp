@@ -1,0 +1,18 @@
+﻿<Application x:Class="AiXiFan.Uwp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="using:AiXiFan.Uwp.Converters"
+             xmlns:local="using:AiXiFan.Uwp"
+             xmlns:viewModels="using:AiXiFan.Uwp.ViewModels"
+             RequestedTheme="Light">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/AiXiFanBrushStyle.xaml" />
+                <ResourceDictionary Source="/Styles/AiXiFanFontSizeStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <viewModels:ViewModelLocator x:Key="Locator" />
+            <converters:ItemClickEventArgsConverter x:Key="ItemClickEventArgsConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

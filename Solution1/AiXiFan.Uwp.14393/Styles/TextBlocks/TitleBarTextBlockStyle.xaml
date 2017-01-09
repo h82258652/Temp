@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/AiXiFanBrushStyle.xaml" />
+        <ResourceDictionary Source="/Styles/AiXiFanFontSizeStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style x:Key="TitleBarTextBlockStyle"
+           TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="FontFamily"
+                Value="/Assets/Fonts/Roboto-Regular.ttf#Roboto,/Assets/Fonts/SourceHanSansSC-Normal.otf#Source Han Sans SC" />
+        <Setter Property="FontSize"
+                Value="{StaticResource AiXiFanTitleBarFontSize}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource AiXiFanPrimaryTextLightBrush}" />
+        <Setter Property="LineHeight"
+                Value="{StaticResource AiXiFanTitleBarFontSize}" />
+        <Setter Property="LineStackingStrategy"
+                Value="BlockLineHeight" />
+        <Setter Property="TextAlignment"
+                Value="Left" />
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,132 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/AcArticleBrushStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style x:Key="FloatingActionButtonStyle"
+           TargetType="Button">
+        <Setter Property="Width"
+                Value="56" />
+        <Setter Property="Height"
+                Value="56" />
+        <Setter Property="HorizontalAlignment"
+                Value="Right" />
+        <Setter Property="VerticalAlignment"
+                Value="Bottom" />
+        <Setter Property="Background"
+                Value="{ThemeResource AcArticleAccentBrush}" />
+        <Setter Property="BorderBrush"
+                Value="Transparent" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="FocusVisualMargin"
+                Value="0" />
+        <Setter Property="FontFamily"
+                Value="{ThemeResource ContentControlThemeFontFamily}" />
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="FontWeight"
+                Value="Normal" />
+        <Setter Property="Foreground"
+                Value="{ThemeResource AcArticlePrimaryTextLightBrush}" />
+        <Setter Property="Padding"
+                Value="0" />
+        <Setter Property="UseSystemFocusVisuals"
+                Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True"
+                                                                       Storyboard.TargetName="Shadow"
+                                                                       Storyboard.TargetProperty="OffsetY">
+                                            <DiscreteDoubleKeyFrame KeyTime="0:0:0"
+                                                                    Value="4" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True"
+                                                                       Storyboard.TargetName="Shadow"
+                                                                       Storyboard.TargetProperty="BlurRadius">
+                                            <DiscreteDoubleKeyFrame KeyTime="0:0:0"
+                                                                    Value="5" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True"
+                                                                       Storyboard.TargetName="Shadow"
+                                                                       Storyboard.TargetProperty="ShadowOpacity">
+                                            <DiscreteDoubleKeyFrame KeyTime="0:0:0"
+                                                                    Value="0.14" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed" />
+                                <VisualState x:Name="Disabled" />
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0:0:0"
+                                                      To="Pressed">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0:0:0.2"
+                                                             EnableDependentAnimation="True"
+                                                             Storyboard.TargetName="Shadow"
+                                                             Storyboard.TargetProperty="OffsetY"
+                                                             To="4" />
+                                            <DoubleAnimation Duration="0:0:0.2"
+                                                             EnableDependentAnimation="True"
+                                                             Storyboard.TargetName="Shadow"
+                                                             Storyboard.TargetProperty="BlurRadius"
+                                                             To="5" />
+                                            <DoubleAnimation Duration="0:0:0.2"
+                                                             EnableDependentAnimation="True"
+                                                             Storyboard.TargetName="Shadow"
+                                                             Storyboard.TargetProperty="ShadowOpacity"
+                                                             To="0.14" />
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="Pressed"
+                                                      GeneratedDuration="0:0:0">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0:0:0.2"
+                                                             EnableDependentAnimation="True"
+                                                             Storyboard.TargetName="Shadow"
+                                                             Storyboard.TargetProperty="OffsetY"
+                                                             To="1" />
+                                            <DoubleAnimation Duration="0:0:0.2"
+                                                             EnableDependentAnimation="True"
+                                                             Storyboard.TargetName="Shadow"
+                                                             Storyboard.TargetProperty="BlurRadius"
+                                                             To="1.5" />
+                                            <DoubleAnimation Duration="0:0:0.2"
+                                                             EnableDependentAnimation="True"
+                                                             Storyboard.TargetName="Shadow"
+                                                             Storyboard.TargetProperty="ShadowOpacity"
+                                                             To="0.12" />
+                                        </Storyboard>
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <controls:DropShadowPanel x:Name="Shadow"
+                                                  BlurRadius="1.5"
+                                                  OffsetY="1"
+                                                  ShadowOpacity="0.12"
+                                                  Color="Black">
+                            <Ellipse Fill="{TemplateBinding Background}" />
+                        </controls:DropShadowPanel>
+                        <Border Width="24"
+                                Height="24">
+                            <ContentPresenter HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              Content="{TemplateBinding Content}"
+                                              Foreground="{TemplateBinding Foreground}"
+                                              Padding="{TemplateBinding Padding}" />
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

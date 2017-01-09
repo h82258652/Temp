@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="AiXiFanAccentColor">#FD4C5B</Color>
+    <Color x:Key="AiXiFanPrimaryTextLightColor">#FFFFFFFF</Color>
+    <Color x:Key="AiXiFanSecondaryTextLightColor">#B3FFFFFF</Color>
+    <Color x:Key="AiXiFanTertiaryTextLightColor">#80FFFFFF</Color>
+    <Color x:Key="AiXiFanDisabledTextLightColor">#80FFFFFF</Color>
+    <Color x:Key="AiXiFanDividerLightColor">#1FFFFFFF</Color>
+    <Color x:Key="AiXiFanPrimaryTextDarkColor">#DE000000</Color>
+    <Color x:Key="AiXiFanSecondaryTextDarkColor">#8A000000</Color>
+    <Color x:Key="AiXiFanTertiaryTextDarkColor">#61000000</Color>
+    <Color x:Key="AiXiFanDisabledTextDarkColor">#61000000</Color>
+    <Color x:Key="AiXiFanDividerDarkColor">#1F000000</Color>
+    <Color x:Key="AiXiFanIconLightColor">#FFFFFFFF</Color>
+    <Color x:Key="AiXiFanIconInactiveLightColor">#80FFFFFF</Color>
+    <Color x:Key="AiXiFanIconDarkColor">#8A000000</Color>
+    <Color x:Key="AiXiFanIconInactiveDarkColor">#61000000</Color>
+</ResourceDictionary>

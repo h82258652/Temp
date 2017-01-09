@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{823FEFB9-1714-4799-B054-2D8F0428FD39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZhuangBi</RootNamespace>
+    <AssemblyName>ZhuangBi.Models</AssemblyName>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\AnswerUser.cs" />
+    <Compile Include="Models\ArticleCommentUserInfo.cs" />
+    <Compile Include="Models\ArticleUserInfo.cs" />
+    <Compile Include="Models\ArticleVoteInfo.cs" />
+    <Compile Include="Models\ArticleVoteUser.cs" />
+    <Compile Include="Models\AssociateAction.cs" />
+    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\ArticleInfo.cs" />
+    <Compile Include="Models\ArticleTopic.cs" />
+    <Compile Include="Models\AvatarUploadResult.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\FollowRow.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\GetAnswerResult.cs" />
+    <Compile Include="Models\GetArticleResult.cs" />
+    <Compile Include="Models\GetFollowsResult.cs" />
+    <Compile Include="Models\GetFollowType.cs" />
+    <Compile Include="Models\GetUidResult.cs" />
+    <Compile Include="Models\GetUserActionsArticleResult.cs" />
+    <Compile Include="Models\Interfaces\IAddTime.cs" />
+    <Compile Include="Models\JobsList.cs" />
+    <Compile Include="Models\LoginResult.cs" />
+    <Compile Include="Models\ProfileSetting.cs" />
+    <Compile Include="Models\QuestionInfo.cs" />
+    <Compile Include="Models\QuestionTopic.cs" />
+    <Compile Include="Models\RegisterResult.cs" />
+    <Compile Include="Models\ResultBase.cs" />
+    <Compile Include="Models\ResultBaseGeneric.cs" />
+    <Compile Include="Models\SaveCommentResult.cs" />
+    <Compile Include="Models\Topic.cs" />
+    <Compile Include="Models\TopicsResult.cs" />
+    <Compile Include="Models\UserAction.cs" />
+    <Compile Include="Models\UserActionArticle.cs" />
+    <Compile Include="Models\UserActionsResult.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Models\VoteInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

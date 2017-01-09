@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/Buttons/ChannelButtonStyle.xaml" />
+        <ResourceDictionary Source="/Styles/Buttons/EmptyButtonStyle.xaml" />
+        <ResourceDictionary Source="/Styles/Buttons/FlatCircleButtonStyle.xaml" />
+        <ResourceDictionary Source="/Styles/Buttons/NavigationBackButtonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

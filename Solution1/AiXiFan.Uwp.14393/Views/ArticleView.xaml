@@ -1,0 +1,108 @@
+﻿<local:AiXiFanViewBase x:Class="AiXiFan.Uwp.Views.ArticleView"
+                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       xmlns:behaviors="using:AiXiFan.Uwp.Behaviors"
+                       xmlns:controls="using:AiXiFan.Uwp.Controls"
+                       xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+                       xmlns:local="using:AiXiFan.Uwp.Views"
+                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                       x:Name="Root"
+                       DataContext="{Binding Source={StaticResource Locator},
+                                      Path=Article}"
+                       NavigationCacheMode="Required"
+                       mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/AiXiFanButtonStyle.xaml" />
+                <ResourceDictionary Source="/Styles/AiXiFanTextBlockStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Background="{StaticResource AiXiFanAccentBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    Style="{StaticResource NavigationBackButtonStyle}">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <behaviors:GoBackAction />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
+            <Grid x:Name="TitleZone"
+                  Grid.Column="1"
+                  Background="Transparent">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Loaded">
+                        <core:ChangePropertyAction PropertyName="TitleBar"
+                                                   TargetObject="{Binding ElementName=Root}"
+                                                   Value="{Binding ElementName=TitleZone}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+                <TextBlock Style="{StaticResource TitleBarTextBlockStyle}"
+                           Text="文章" />
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"
+                        Orientation="Horizontal">
+                <ComboBox ItemsSource="{Binding Path=ArticleSubChannels,Mode=OneWay}"></ComboBox>
+                <ComboBox>
+                    <ComboBoxItem Content="最新回复" />
+                    <ComboBoxItem Content="最新发布" />
+                    <ComboBoxItem Content="围观最多" />
+                    <ComboBoxItem Content="评论最多" />
+                </ComboBox>
+                <ComboBox>
+                    <ComboBoxItem Content="一周以内" />
+                    <ComboBoxItem Content="一个月内" />
+                    <ComboBoxItem Content="三个月内" />
+                    <ComboBoxItem Content="全部" />
+                </ComboBox>
+            </StackPanel>
+            <ListView Grid.Row="1"
+                      IsItemClickEnabled="True"
+                      ItemsSource="{Binding Path=Articles}"
+                      SelectionMode="None">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="ItemClick">
+                        <core:InvokeCommandAction Command="{Binding Path=ArticleClickCommand}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:ArticleItem Title="{Binding Path=Title}"
+                                              CommentCount="{Binding Path=Comments}"
+                                              Owner="{Binding Path=User.UserName}"
+                                              ViewCount="{Binding Path=Views}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment"
+                                Value="Stretch" />
+                        <Setter Property="BorderBrush"
+                                Value="{StaticResource AiXiFanDividerDarkBrush}" />
+                        <Setter Property="BorderThickness"
+                                Value="0,0,0,1" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </Grid>
+    </Grid>
+</local:AiXiFanViewBase>

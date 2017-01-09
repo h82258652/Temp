@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="copyright" content="Copyright (c) AcFun">
+    <style type="text/css">
+        html {
+            font-family: Helvetica;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+            display: block;
+        }
+
+        audio, canvas, progress, video {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+
+            audio:not([controls]) {
+                display: none;
+                height: 0;
+            }
+
+        [hidden], template {
+            display: none;
+        }
+
+        a {
+            background: transparent;
+        }
+
+            a:active, a:hover {
+                outline: 0;
+            }
+
+        abbr[title] {
+            border-bottom: 1px dotted;
+        }
+
+        b, strong {
+            font-weight: bold;
+        }
+
+        dfn {
+            font-style: italic;
+        }
+
+        mark {
+            background: #ff0;
+            color: #000;
+        }
+
+        small {
+            font-size: 80%;
+        }
+
+        sub, sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sup {
+            top: -.5em;
+        }
+
+        sub {
+            bottom: -.25em;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        figure {
+            margin: 1em 40px;
+        }
+
+        hr {
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            height: 0;
+        }
+
+        pre {
+            overflow: auto;
+        }
+
+        code, kbd, pre, samp {
+            font-family: monospace,monospace;
+            font-size: 1em;
+        }
+
+        button, input, optgroup, select, textarea {
+            color: inherit;
+            font: inherit;
+            margin: 0;
+        }
+
+        button {
+            overflow: visible;
+        }
+
+        button, select {
+            text-transform: none;
+        }
+
+        button, html input[type="button"], input[type="reset"], input[type="submit"] {
+            -webkit-appearance: button;
+            cursor: pointer;
+        }
+
+            button[disabled], html input[disabled] {
+                cursor: default;
+            }
+
+            button::-moz-focus-inner, input::-moz-focus-inner {
+                border: 0;
+                padding: 0;
+            }
+
+        input {
+            line-height: normal;
+        }
+
+            input[type="checkbox"], input[type="radio"] {
+                box-sizing: border-box;
+                padding: 0;
+            }
+
+            input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+                height: auto;
+            }
+
+            input[type="search"] {
+                -webkit-appearance: textfield;
+                -moz-box-sizing: content-box;
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+            }
+
+                input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+                    -webkit-appearance: none;
+                }
+
+        fieldset {
+            border: 1px solid #c0c0c0;
+            margin: 0 2px;
+            padding: .35em .625em .75em;
+        }
+
+        legend {
+            border: 0;
+            padding: 0;
+        }
+
+        textarea {
+            overflow: auto;
+        }
+
+        optgroup {
+            font-weight: bold;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        td, th {
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            background: #F4F4F4;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        div, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, label {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, button, input, select, textarea {
+            font-size: 100%;
+            color: #666;
+            outline: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 100%;
+            font-weight: 400;
+        }
+
+        a {
+            color: #606060;
+            text-decoration: none;
+        }
+
+        em, i {
+            font-style: normal;
+        }
+
+        img {
+            max-width: 100%;
+            border: 0;
+        }
+
+        input {
+            -webkit-appearance: none;
+        }
+
+            input:focus {
+                border: 0;
+                outline: 0;
+            }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        ol, ul, li {
+            list-style: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .icon {
+            display: inline-block;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .error {
+            color: #e74c3c;
+        }
+
+        .clear:after {
+            content: "";
+            display: block;
+            clear: both;
+            width: 0;
+            height: 0;
+        }
+
+        a, button, input {
+            -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        @media all and (-webkit-transform-3d) {
+            a, button, input {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0.10);
+            }
+        }
+
+        #stage {
+            background-color: #F4F4F4;
+            color: #3c3c3c;
+            padding: 8px;
+            overflow: hidden;
+            line-height: 1.6;
+            font-size: .9375rem;
+        }
+
+            #stage p, #stage span, #stage div {
+                white-space: normal !important;
+                word-break: break-all !important;
+            }
+
+            #stage img[src*="editor/dialogs/emotion/images"] {
+                max-width: 80px !important;
+            }
+
+            #stage img, #stage embed, #stage iframe, #stage object, #stage div {
+                max-width: 100% !important;
+                height: auto;
+            }
+
+            #stage .img-emot-ac {
+                max-width: 80px;
+            }
+
+            #stage img {
+                max-width: 304px;
+            }
+
+            #stage .title {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+            #stage .introduction {
+                margin-top: 1em;
+            }
+
+            #stage .portrait {
+                width: 4em;
+                height: 4em;
+                border-radius: 2em;
+            }
+
+                #stage .portrait img {
+                    width: 4em;
+                    height: 4em;
+                    border-radius: 2em;
+                }
+
+            #stage .fl {
+                float: left;
+            }
+
+            #stage .fr {
+                float: right;
+            }
+
+            #stage .name {
+                margin-left: 0.5em;
+                margin-top: 0.5em;
+            }
+
+            #stage .time {
+                font-size: 0.8em;
+                color: #666;
+            }
+
+            #stage .browse-quantity {
+                font-size: 1em;
+                color: #888;
+                margin-top: 2.4em;
+            }
+
+            #stage .line {
+                height: 1px;
+                background: #e5e5e5;
+                margin-top: 1.5em;
+                margin-bottom: 1.5em;
+            }
+
+            #stage .txt {
+                text-indent: 2em;
+            }
+
+            #stage .illustration {
+                margin: 1.8em 0;
+            }
+
+        #username {
+            font-weight: 600;
+        }
+
+        #views span {
+            margin-right: 15px;
+        }
+
+        #stage .castBanana .portrait {
+            width: 6em;
+            height: 6em;
+            border-radius: 3em;
+            margin: auto;
+            border: 2px solid #ffb835;
+            position: relative;
+        }
+
+            #stage .castBanana .portrait .headPortrait {
+                width: 6em;
+                height: 6em;
+                border-radius: 2.9em;
+            }
+
+        #stage .castBanana .bananaImg {
+            width: 3em;
+            height: 2.25em;
+            border-radius: 0;
+            position: absolute;
+            bottom: 6px;
+            right: -19px;
+        }
+
+        #stage .btn {
+            width: 12em;
+            height: 2.4em;
+            border-radius: 2em;
+            background: #ffb835;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 2.4em;
+            font-size: 1.3em;
+            color: #61260e;
+        }
+
+        #stage .tip {
+            text-align: center;
+            color: #999;
+        }
+
+        .browse-quantity .banana {
+            width: 14px;
+            height: 14px;
+            background: url(file:///android_asset/banana.png) no-repeat;
+            background-size: 100% 100%;
+            display: inline-block;
+            margin-right: 2px;
+            vertical-align: middle;
+        }
+
+        .browse-quantity .watch {
+            width: 14px;
+            height: 14px;
+            background: url(file:///android_asset/watch.png) no-repeat;
+            background-size: 100% 80%;
+            display: inline-block;
+            margin-right: 2px;
+            vertical-align: middle;
+        }
+
+        .browse-quantity .margin {
+            margin-right: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        function setImg(index) {
+            var pic = document.getElementsByTagName("img")[index];
+            var block = pic.parentElement;
+            while (block != null && block.nodeName.toLowerCase() !== "div") {
+                block = block.parentElement;
+            }
+            if (block) {
+                var src = pic.getAttribute("loc");
+                pic.setAttribute("src", src);
+                block.className = "";
+            }
+        }
+
+        function setBanana(count) {
+            document.getElementById("bananas").innerText = count;
+        }
+
+        window.changeFontSize = function (percent) {
+            var stage = document.getElementById("content");
+            var elmAll = stage.getElementsByTagName("*");
+            var oldSize;
+            percent = parseFloat(percent);
+            console.log(percent);
+            if (percent && typeof (percent) == "number") {
+                for (var i = 0; i < elmAll.length; i++) {
+                    oldSize = (elmAll[i].currentStyle ? elmAll[i].currentStyle : window.getComputedStyle(elmAll[i], null)).fontSize;
+                    oldSize = parseFloat(oldSize);
+                    elmAll[a].style.fontSize = (oldSize * percent) + "px";
+                }
+            }
+        }
+
+        function setContent(content) {
+            document.getElementById("content").innerHTML = content;
+        }
+    </script>
+</head>
+<body>
+    <div id="stage">
+        <section id="content" class="article-body">
+            <!-- 内容 -->
+        </section>
+        <div class="line"></div>
+        <div class="castBanana" style="margin-bottom: 30px;">
+            <div class="portrait">
+                <img class="headPortrait" id="userhead" src="" /><!-- 头像 -->
+                <img class="bananaImg" src="../Images/icon_banana.png" /><!-- 香蕉图片 -->
+            </div>
+            <div class="btn" id="pushbanana">食我大蕉</div>
+            <p class="tip">戳按钮给UP主投蕉</p>
+        </div>
+    </div>
+</body>
+</html>

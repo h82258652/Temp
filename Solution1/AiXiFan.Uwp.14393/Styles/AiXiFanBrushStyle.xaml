@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/AiXiFanColorStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="AiXiFanAccentBrush"
+                     Color="{StaticResource AiXiFanAccentColor}" />
+    <SolidColorBrush x:Key="AiXiFanPrimaryTextLightBrush"
+                     Color="{StaticResource AiXiFanPrimaryTextLightColor}" />
+    <SolidColorBrush x:Key="AiXiFanSecondaryTextLightBrush"
+                     Color="{StaticResource AiXiFanSecondaryTextLightColor}" />
+    <SolidColorBrush x:Key="AiXiFanTertiaryTextLightBrush"
+                     Color="{StaticResource AiXiFanTertiaryTextLightColor}" />
+    <SolidColorBrush x:Key="AiXiFanDisabledTextLightBrush"
+                     Color="{StaticResource AiXiFanDisabledTextLightColor}" />
+    <SolidColorBrush x:Key="AiXiFanDividerLightBrush"
+                     Color="{StaticResource AiXiFanDividerLightColor}" />
+    <SolidColorBrush x:Key="AiXiFanPrimaryTextDarkBrush"
+                     Color="{StaticResource AiXiFanPrimaryTextDarkColor}" />
+    <SolidColorBrush x:Key="AiXiFanSecondaryTextDarkBrush"
+                     Color="{StaticResource AiXiFanSecondaryTextDarkColor}" />
+    <SolidColorBrush x:Key="AiXiFanTertiaryTextDarkBrush"
+                     Color="{StaticResource AiXiFanTertiaryTextDarkColor}" />
+    <SolidColorBrush x:Key="AiXiFanDisabledTextDarkBrush"
+                     Color="{StaticResource AiXiFanDisabledTextDarkColor}" />
+    <SolidColorBrush x:Key="AiXiFanDividerDarkBrush"
+                     Color="{StaticResource AiXiFanDividerDarkColor}" />
+    <SolidColorBrush x:Key="AiXiFanIconLightBrush"
+                     Color="{StaticResource AiXiFanIconLightColor}" />
+    <SolidColorBrush x:Key="AiXiFanIconInactiveLightBrush"
+                     Color="{StaticResource AiXiFanIconInactiveLightColor}" />
+    <SolidColorBrush x:Key="AiXiFanIconDarkBrush"
+                     Color="{StaticResource AiXiFanIconDarkColor}" />
+    <SolidColorBrush x:Key="AiXiFanIconInactiveDarkBrush"
+                     Color="{StaticResource AiXiFanIconInactiveDarkColor}" />
+</ResourceDictionary>

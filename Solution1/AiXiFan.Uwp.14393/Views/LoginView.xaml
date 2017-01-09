@@ -1,0 +1,79 @@
+﻿<local:AiXiFanViewBase x:Class="AiXiFan.Uwp.Views.LoginView"
+                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       xmlns:behaviors="using:AiXiFan.Uwp.Behaviors"
+                       xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+                       xmlns:local="using:AiXiFan.Uwp.Views"
+                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                       x:Name="Root"
+                       mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/AiXiFanButtonStyle.xaml" />
+                <ResourceDictionary Source="/Styles/AiXiFanTextBlockStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Background="{StaticResource AiXiFanAccentBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0"
+                    Style="{StaticResource NavigationBackButtonStyle}">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <behaviors:GoBackAction />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
+            <Grid x:Name="TitleZone"
+                  Grid.Column="1"
+                  Background="Transparent">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Loaded">
+                        <core:ChangePropertyAction PropertyName="TitleBar"
+                                                   TargetObject="{Binding ElementName=Root}"
+                                                   Value="{Binding ElementName=TitleZone}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+                <TextBlock Style="{StaticResource TitleBarTextBlockStyle}"
+                           Text="登录" />
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Foreground="{StaticResource AiXiFanAccentBrush}"
+                           Text="TODO ACFUN IMAGE" />
+                <TextBox PlaceholderText="手机号 / 邮箱" />
+                <PasswordBox PlaceholderText="密纹" />
+                <Button HorizontalAlignment="Stretch"
+                        Background="{StaticResource AiXiFanAccentBrush}"
+                        Content="登录"
+                        Foreground="White" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"
+                            Content="快速注册"
+                            Foreground="#57C9ED" />
+                    <Button Grid.Column="2"
+                            Content="忘记密码?"
+                            Foreground="#57C9ED" />
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</local:AiXiFanViewBase>

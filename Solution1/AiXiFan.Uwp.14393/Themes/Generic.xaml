@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Controls/AiXiFanPivot.xaml" />
+        <ResourceDictionary Source="/Controls/AiXiFanSplitView.xaml" />
+        <ResourceDictionary Source="/Controls/AiXiFanSplitViewPaneButton.xaml" />
+        <ResourceDictionary Source="/Controls/ArticleItem.xaml" />
+        <ResourceDictionary Source="/Controls/ButtonEx.xaml" />
+        <ResourceDictionary Source="/Controls/FloatingActionButton.xaml" />
+        <ResourceDictionary Source="/Controls/Shadow.xaml" />
+        <ResourceDictionary Source="/Controls/TitleBar.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
